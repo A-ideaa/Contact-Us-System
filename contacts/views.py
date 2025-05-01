@@ -6,8 +6,22 @@ from .models import Contact
 from .forms import ContactForm
 
 def index(request):
+    status_filter = request.GET.get('status', '')  # Get status from query parameters
     contacts = Contact.objects.all()
-    return render(request, 'contacts/index.html', {'contacts': contacts})
+    
+    # Apply status filter if provided
+    if status_filter:
+        contacts = contacts.filter(serving_status=status_filter)
+    
+    # Get all possible status choices for the filter dropdown
+    status_choices = Contact.STATUS_CHOICES
+    
+    context = {
+        'contacts': contacts,
+        'status_choices': status_choices,
+        'current_status': status_filter
+    }
+    return render(request, 'contacts/index.html', context)
 
 def contact(request):
     if request.method == 'POST':
