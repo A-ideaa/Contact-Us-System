@@ -343,3 +343,35 @@ Contributions are welcome! Please feel free to submit a Pull Request.
    - URLs are public and accessible to anyone
    - Consider using ngrok's paid features for additional security
    - Monitor access logs for suspicious activity 
+
+## Database Management
+
+### Local Database Setup
+The application uses SQLite as its database. To manage the database across different devices:
+
+1. **Initial Setup on a New Device**:
+   ```bash
+   python manage.py migrate
+   ```
+
+2. **Backing Up the Database**:
+   ```bash
+   python manage_db.py backup
+   ```
+   This creates a timestamped backup in the `database_backups` directory.
+
+3. **Restoring from Backup**:
+   ```bash
+   python manage_db.py restore database_backups/db_backup_YYYYMMDD_HHMMSS.sqlite3
+   ```
+
+4. **Running Migrations**:
+   ```bash
+   python manage_db.py migrate
+   ```
+
+### Database Portability
+- The database file (`db.sqlite3`) is excluded from version control
+- Use the backup/restore functionality to transfer data between devices
+- Always run migrations after restoring a database backup
+- Keep backups in a shared location (like cloud storage) for easy access 
