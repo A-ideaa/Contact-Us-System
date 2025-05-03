@@ -112,7 +112,7 @@ graph LR
     end
 
     subgraph Admin Endpoints
-        D[/] -->|GET| E[Contact List]
+        D[/home/] -->|GET| E[Contact List]
         F[/update_status/:id/] -->|POST| G[Update Status]
         H[/admin/] -->|GET/POST| I[Django Admin]
     end
