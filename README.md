@@ -106,12 +106,12 @@ stateDiagram-v2
 
 ```mermaid
 graph LR
-    subgraph "Public Endpoints"
+    subgraph Public Endpoints
         A[/contact/] -->|POST| B[Create Contact]
         A -->|GET| C[Contact Form]
     end
 
-    subgraph "Admin Endpoints"
+    subgraph Admin Endpoints
         D[/] -->|GET| E[Contact List]
         F[/update_status/:id/] -->|POST| G[Update Status]
         H[/admin/] -->|GET/POST| I[Django Admin]
