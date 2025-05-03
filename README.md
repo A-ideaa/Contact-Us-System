@@ -116,11 +116,6 @@ graph LR
         F[/update_status/:id/] -->|POST| G[Update Status]
         H[/admin/] -->|GET/POST| I[Django Admin]
     end
-
-    style A fill:#f9f,stroke:#333
-    style D fill:#bbf,stroke:#333
-    style F fill:#dfd,stroke:#333
-    style H fill:#fdd,stroke:#333
 ```
 
 ## Features
