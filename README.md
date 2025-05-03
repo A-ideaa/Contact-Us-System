@@ -110,7 +110,7 @@ graph LR
         A[/contact/] -->|POST| B[Create Contact]
         A -->|GET| C[Contact Form]
     end
-    
+
     subgraph "Admin Endpoints"
         D[/] -->|GET| E[Contact List]
         F[/update_status/:id/] -->|POST| G[Update Status]
