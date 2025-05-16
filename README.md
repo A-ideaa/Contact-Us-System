@@ -217,20 +217,15 @@ stateDiagram-v2
 ```mermaid
 graph LR
     subgraph "Public Endpoints"
-        A[/contact/] -->|POST| B[Create Contact]
-        A -->|GET| C[Contact Form]
+        A[/contact/] --> |POST| B[Create Contact]
+        A --> |GET| C[Contact Form]
     end
     
     subgraph "Admin Endpoints"
-        D[/] -->|GET| E[Contact List]
-        F[/update_status/:id/] -->|POST| G[Update Status]
-        H[/admin/] -->|GET/POST| I[Django Admin]
+        D[/] --> |GET| E[Contact List]
+        F[/update_status/:id/] --> |POST| G[Update Status]
+        H[/admin/] --> |GET/POST| I[Django Admin]
     end
-
-    style A fill:#f9f,stroke:#333
-    style D fill:#bbf,stroke:#333
-    style F fill:#dfd,stroke:#333
-    style H fill:#fdd,stroke:#333
 ```
 
 ## Features
