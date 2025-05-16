@@ -27,6 +27,7 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
+            # Form processing is handled in the form's clean method
             contact = form.save()
             
             # Send email notification

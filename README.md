@@ -1,6 +1,125 @@
 # Contact Management System
 
-A modern Django-based contact management system with a beautiful UI, built using Django and Tailwind CSS. This system allows customers to submit inquiries and administrators to track their status efficiently.
+A modern contact management system built with Django and React, featuring a beautiful UI with dark mode.
+
+## Features
+
+- Modern React frontend with responsive design
+- Dark mode support with orange/black theme
+- Contact form for submitting new inquiries
+- Admin dashboard to view and manage contacts
+- Status tracking for each contact (Initial, In Contact, Done, etc.)
+- Email notifications for new submissions
+
+## Tech Stack
+
+### Backend
+- Django
+- Django REST Framework
+- SQLite database (can be configured for other databases)
+
+### Frontend
+- React
+- React Router for navigation
+- Tailwind CSS for styling
+- Heroicons for beautiful icons
+- Dark mode support
+
+## Setup and Installation
+
+### Prerequisites
+- Python 3.6+
+- Node.js and npm
+- Git
+
+### Installation
+
+1. Clone the repository:
+```
+git clone <repository-url>
+cd contact-management-system
+```
+
+2. Set up the Python virtual environment:
+```
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+3. Set up environment variables:
+Create a `.env` file in the project root with the following variables:
+```
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-email-password
+MAIL_DEFAULT_SENDER=your-email@gmail.com
+ADMIN_EMAIL=admin-email@example.com
+```
+
+4. Install frontend dependencies:
+```
+cd frontend
+npm install
+```
+
+5. Build the frontend:
+```
+npm run build
+cd ..
+```
+
+6. Run database migrations:
+```
+python manage.py migrate
+```
+
+7. Create a superuser:
+```
+python manage.py createsuperuser
+```
+
+## Running the Application
+
+### Development Mode
+
+1. Run the Django backend:
+```
+make run-backend
+```
+
+2. In a new terminal, run the React frontend:
+```
+make run-frontend
+```
+
+Access the app at http://localhost:3000
+
+### Production Mode
+
+1. Build the frontend:
+```
+make build-frontend
+```
+
+2. Collect static files:
+```
+make collect-static
+```
+
+3. Run the Django server:
+```
+python manage.py runserver
+```
+
+Access the app at http://localhost:8000
+
+## Admin Access
+
+The admin panel is available at http://localhost:8000/admin. Use the superuser credentials you created earlier to log in.
+
+## License
+
+This project is licensed under the MIT License.
 
 ## System Architecture
 
