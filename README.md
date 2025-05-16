@@ -217,7 +217,7 @@ stateDiagram-v2
 ```mermaid
 graph LR
     subgraph "Public Endpoints"
-        A[/contact/] --> |POST| B[Create Contact]
+        A[contact] --> |POST| B[Create Contact]
         A --> |GET| C[Contact Form]
     end
     
