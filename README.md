@@ -140,15 +140,6 @@ graph TB
         D --> |Notify| F[Admin Email]
         G[ngrok] --> |Tunnel| B
     end
-
-    style A fill:#f9f,stroke:#333
-    style H fill:#f9f,stroke:#333
-    style B fill:#bbf,stroke:#333
-    style C fill:#dfd,stroke:#333
-    style D fill:#fdd,stroke:#333
-    style E fill:#ddd,stroke:#333
-    style F fill:#ffd,stroke:#333
-    style G fill:#ddf,stroke:#333
 ```
 
 ## Database Schema
